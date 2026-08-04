@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --obsidian: #08090f;
+  --surface: #10121d;
+  --neon-cyan: #00f3ff;
+  --electric-magenta: #ff0055;
+  --acid-yellow: #ffe600;
+  --cyber-green: #00ff66;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--obsidian);
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neon-cyan);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00c8d4;
+}
+
+/* ─── Scanline Overlay ─── */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 243, 255, 0.015) 2px,
+    rgba(0, 243, 255, 0.015) 4px
+  );
+  animation: flicker 0.15s infinite;
+}
+
+.scanline-beam {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 243, 255, 0.03) 50%,
+    transparent 100%
+  );
+  background-size: 100% 60px;
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 -100vh; }
+  100% { background-position: 0 100vh; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.97; }
+}
+
+/* ─── Pixel Button Base ─── */
+.pixel-btn {
+  position: relative;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.pixel-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
+}
+
+/* ─── Neon Text Glow ─── */
+.glow-cyan {
+  text-shadow: 0 0 8px #00f3ff, 0 0 20px #00f3ff80;
+}
+.glow-magenta {
+  text-shadow: 0 0 8px #ff0055, 0 0 20px #ff005580;
+}
+.glow-green {
+  text-shadow: 0 0 8px #00ff66, 0 0 20px #00ff6680;
+}
+.glow-yellow {
+  text-shadow: 0 0 8px #ffe600, 0 0 20px #ffe60080;
+}
+
+/* ─── Pixel Border Utility ─── */
+.pixel-border-cyan {
+  border: 2px solid #00f3ff;
+  box-shadow: 4px 4px 0px #00f3ff;
+}
+.pixel-border-magenta {
+  border: 2px solid #ff0055;
+  box-shadow: 4px 4px 0px #ff0055;
+}
+.pixel-border-yellow {
+  border: 2px solid #ffe600;
+  box-shadow: 4px 4px 0px #ffe600;
+}
+.pixel-border-green {
+  border: 2px solid #00ff66;
+  box-shadow: 4px 4px 0px #00ff66;
+}
+
+/* ─── Terminal Cursor ─── */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background-color: var(--neon-cyan);
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ─── Glitch Effect ─── */
+@keyframes glitch {
+  0%, 90%, 100% { transform: translate(0); clip-path: none; }
+  92% { transform: translate(-2px, 1px); }
+  94% { transform: translate(2px, -1px); }
+  96% { transform: translate(-1px, 2px); }
+  98% { transform: translate(1px, -2px); }
+}
+
+.animate-glitch {
+  animation: glitch 4s infinite;
+}
+
+/* ─── Battery Bar Segments ─── */
+.battery-segment {
+  width: 12px;
+  height: 18px;
+  border: 1px solid currentColor;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .pixel-border-cyan,
+  .pixel-border-magenta,
+  .pixel-border-yellow,
+  .pixel-border-green {
+    box-shadow: 2px 2px 0px currentColor;
+  }
+}
+
+/* ─── Fade In Animation ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* ─── HUD Pulse Dot ─── */
+@keyframes hudPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 102, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(0, 255, 102, 0); }
+}
+
+.hud-pulse {
+  animation: hudPulse 1.5s ease-out infinite;
+}
+
+/* ─── Gas Meter Bar Animation ─── */
+@keyframes gasMeterFill {
+  0% { transform: scaleX(0.3); }
+  100% { transform: scaleX(1); }
+}
