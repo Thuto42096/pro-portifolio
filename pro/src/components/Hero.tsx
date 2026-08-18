@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Download, Send, Zap, Activity } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 
-const ROLES = ['Full-Stack Engineer', 'Smart Contract Dev', 'Web3 Sys Architect'];
+const ROLES = ['Full-Stack Developer', 'Smart Contract Dev', 'AI Agent Builder', 'LifeLong Learner'];
 
 const GAS_BARS = [
   { label: 'BASE', value: 72, color: '#00f3ff' },
@@ -12,10 +12,10 @@ const GAS_BARS = [
 ];
 
 const STAT_ROWS = [
-  { label: 'COMMITS', value: '1,200+', color: 'text-neon-cyan' },
-  { label: 'CONTRACTS', value: '24', color: 'text-electric-magenta' },
-  { label: 'PROTOCOLS', value: '8', color: 'text-acid-yellow' },
-  { label: 'TVL TESTED', value: '$2M+', color: 'text-cyber-green' },
+  { label: 'PUBLIC REPOS', value: '54', color: 'text-neon-cyan' },
+  { label: 'LIVE DEPLOYS', value: '9', color: 'text-electric-magenta' },
+  { label: 'LANGUAGES', value: '8', color: 'text-acid-yellow' },
+  { label: 'FOLLOWERS', value: '18', color: 'text-cyber-green' },
 ];
 
 export function Hero() {

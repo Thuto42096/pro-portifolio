@@ -26,28 +26,32 @@ const SKILLS_TEXT = `
 ║           SKILL MATRIX // ASCII REPORT        ║
 ╠═══════════════════════════════════════════════╣
 ║  FRONTEND ENGINE                              ║
-║  React         ██████████  10/10             ║
-║  TypeScript    █████████·   9/10             ║
-║  Next.js       █████████·   9/10             ║
-║  Tailwind CSS  ██████████  10/10             ║
+║  JavaScript    █████████·   9/10             ║
+║  TypeScript    ████████··   8/10             ║
+║  React         ████████··   8/10             ║
+║  HTML / CSS    █████████·   9/10             ║
 ╠═══════════════════════════════════════════════╣
 ║  WEB3 & DECENTRALIZED                        ║
-║  Solidity      █████████·   9/10             ║
-║  Foundry       █████████·   9/10             ║
-║  Ethers.js     █████████·   9/10             ║
-║  Smart Contracts █████████·  9/10            ║
+║  Solidity      ████████··   8/10             ║
+║  Hardhat       ████████··   8/10             ║
+║  Ethers.js     ████████··   8/10             ║
+║  ERC-721/20    ████████··   8/10             ║
 ╠═══════════════════════════════════════════════╣
 ║  CORE & BACKEND                              ║
-║  Node.js       █████████·   9/10             ║
 ║  Python        ████████··   8/10             ║
-║  PostgreSQL    ████████··   8/10             ║
-║  GraphQL       ████████··   8/10             ║
+║  Node.js       ███████···   7/10             ║
+║  Gemini AI     ███████···   7/10             ║
+║  REST APIs     ████████··   8/10             ║
 ╠═══════════════════════════════════════════════╣
-║  DEVOPS & ENVIRONMENT                        ║
-║  Linux         █████████·   9/10             ║
-║  Docker        ████████··   8/10             ║
-║  Git           ██████████  10/10             ║
-║  CI/CD         ████████··   8/10             ║
+║  TOOLS & DEVOPS                              ║
+║  Git / GitHub  █████████·   9/10             ║
+║  Vercel        █████████·   9/10             ║
+║  Vite          ████████··   8/10             ║
+║  Linux         ███████···   7/10             ║
+╚═══════════════════════════════════════════════╝
+║  GITHUB STATS  → 54 repos · 9 live deploys   ║
+║  LANGUAGES     → JS, TS, Python, HTML, CSS   ║
+║                  Solidity, Java, C#           ║
 ╚═══════════════════════════════════════════════╝`;
 
 const CONTACT_TEXT = `
@@ -67,15 +71,16 @@ const WHOAMI_TEXT = `
 ╔═══════════════════════════════════════════════╗
 ║          SYSTEM IDENTITY REPORT              ║
 ╠═══════════════════════════════════════════════╣
-║  USER     → Thuto Ratlhahane                 ║
+║  USER     → Thuto Ratlhahane (Thuto_R)       ║
 ║  GITHUB   → github.com/Thuto42096            ║
-║  ROLE     → Full-Stack Engineer              ║
-║             AI Agent Developer               ║
-║             Smart Contract Developer          ║
+║  BIO      → Junior dev. Problem solver.      ║
+║             LifeLong Learner.                ║
+║  REPOS    → 54 public (47 original)          ║
+║  DEPLOYS  → 9 live on Vercel                 ║
+║  STACK    → JS/TS · Python · Solidity        ║
 ║  LOCATION → South Africa 🇿🇦                 ║
-║  STACK    → Python | JS/TS | Solidity        ║
-║  KERNEL   → curiosity-v∞.0                   ║
-║  UPTIME   → ${new Date().getFullYear() - 2024} years of building              ║
+║  ON CHAIN → Since April 2024                ║
+║  UPTIME   → ${new Date().getFullYear() - 2024}+ years of building              ║
 ╚═══════════════════════════════════════════════╝`;
 
 function processCommand(cmd: string): { lines: TerminalLine[]; shouldClear?: boolean } {
