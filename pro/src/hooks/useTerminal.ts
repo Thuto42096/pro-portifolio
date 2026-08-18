@@ -54,11 +54,10 @@ const CONTACT_TEXT = `
 ╔═══════════════════════════════════════════════╗
 ║       CONTACT // SECURE CHANNEL OPEN         ║
 ╠═══════════════════════════════════════════════╣
-║  EMAIL    → thuto@thuto.eth                  ║
-║  GITHUB   → github.com/thutor                ║
-║  TWITTER  → @thutoratlhahane                 ║
-║  LINKEDIN → linkedin.com/in/thutor           ║
-║  ENS      → thuto.eth                        ║
+║  EMAIL    → thutoratlhahane@gmail.com        ║
+║  GITHUB   → github.com/Thuto42096            ║
+║  PORTFOLIO→ thuto-r.vercel.app               ║
+║  SYSTEM21 → system21.vercel.app              ║
 ╠═══════════════════════════════════════════════╣
 ║  STATUS   → [OPEN TO OPPORTUNITIES]          ║
 ║  TIMEZONE → Africa/Johannesburg (UTC+2)       ║
@@ -69,13 +68,14 @@ const WHOAMI_TEXT = `
 ║          SYSTEM IDENTITY REPORT              ║
 ╠═══════════════════════════════════════════════╣
 ║  USER     → Thuto Ratlhahane                 ║
+║  GITHUB   → github.com/Thuto42096            ║
 ║  ROLE     → Full-Stack Engineer              ║
+║             AI Agent Developer               ║
 ║             Smart Contract Developer          ║
-║             Web3 Systems Architect            ║
 ║  LOCATION → South Africa 🇿🇦                 ║
-║  CHAIN    → EVM | Solana | Node.js           ║
+║  STACK    → Python | JS/TS | Solidity        ║
 ║  KERNEL   → curiosity-v∞.0                   ║
-║  UPTIME   → ${new Date().getFullYear() - 2018} years of building              ║
+║  UPTIME   → ${new Date().getFullYear() - 2024} years of building              ║
 ╚═══════════════════════════════════════════════╝`;
 
 function processCommand(cmd: string): { lines: TerminalLine[]; shouldClear?: boolean } {
@@ -117,7 +117,7 @@ function processCommand(cmd: string): { lines: TerminalLine[]; shouldClear?: boo
           ...PROJECTS.map((p) => ({
             id: nextId(),
             type: 'output' as const,
-            content: `  ► [${p.status}] ${p.title} — ${p.subtitle}\n     Tags: ${p.tags.join(', ')}\n     GitHub: ${p.githubUrl || 'CLASSIFIED'}\n`,
+            content: `  ► [${p.status}] ${p.title} — ${p.subtitle}\n     Tags: ${p.tags.join(', ')}\n     GitHub: ${p.githubUrl || 'N/A'}${p.liveUrl ? '\n     Live:   ' + p.liveUrl : ''}\n`,
           })),
         ],
       };
