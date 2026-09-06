@@ -13,12 +13,13 @@ const LINE_COLORS: Record<string, string> = {
 
 export function Terminal() {
   const { history, inputValue, setInputValue, submitCommand, navigateHistory } = useTerminal();
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom on new output
+  // Scroll only inside the terminal box — never moves the page viewport
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const el = scrollContainerRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
   }, [history]);
 
   function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
@@ -34,8 +35,10 @@ export function Terminal() {
   }
 
   function focusInput() {
-    inputRef.current?.focus();
+    // preventScroll stops the browser jumping the page to the input on click
+    inputRef.current?.focus({ preventScroll: true });
   }
+
 
   return (
     <section id="terminal" className="py-24 px-4 sm:px-6 relative">
@@ -92,6 +95,7 @@ export function Terminal() {
 
           {/* Stdout Window */}
           <div
+            ref={scrollContainerRef}
             className="h-80 sm:h-96 overflow-y-auto p-4 font-mono text-[11px] leading-relaxed cursor-text space-y-0.5"
             style={{ scrollbarWidth: 'thin' }}
           >
@@ -104,7 +108,6 @@ export function Terminal() {
                 {line.content}
               </div>
             ))}
-            <div ref={bottomRef} />
           </div>
 
           {/* Input Row */}
