@@ -10,15 +10,15 @@ export interface TerminalLine {
 
 const HELP_TEXT = `
 ┌─────────────────────────────────────────────────┐
-│           THUTO.ETH // COMMAND REFERENCE         │
+│           THUTO.ETH // COMMAND REFERENCE        │
 ├─────────────────────────────────────────────────┤
-│  help       → Display this command list          │
-│  skills     → Print ASCII skill report           │
-│  projects   → List all built applications        │
-│  contact    → Reveal contact handles & socials   │
-│  whoami     → System identity report             │
-│  sudo reward→ ??? (classified)                   │
-│  clear      → Clear terminal stdout              │
+│  help       → Display this command list         │
+│  skills     → Print ASCII skill report          │
+│  projects   → List all built applications       │
+│  contact    → Reveal contact handles & socials  │
+│  whoami     → System identity report            │
+│  sudo reward→ ??? (classified)                  │
+│  clear      → Clear terminal stdout             │
 └─────────────────────────────────────────────────┘`;
 
 const SKILLS_TEXT = `
@@ -26,60 +26,60 @@ const SKILLS_TEXT = `
 ║           SKILL MATRIX // ASCII REPORT        ║
 ╠═══════════════════════════════════════════════╣
 ║  FRONTEND ENGINE                              ║
-║  JavaScript    █████████·   9/10             ║
-║  TypeScript    ████████··   8/10             ║
-║  React         ████████··   8/10             ║
-║  HTML / CSS    █████████·   9/10             ║
+║  JavaScript    █████████·   9/10              ║
+║  TypeScript    ████████··   8/10              ║
+║  React         ████████··   8/10              ║
+║  HTML / CSS    █████████·   9/10              ║
 ╠═══════════════════════════════════════════════╣
-║  WEB3 & DECENTRALIZED                        ║
-║  Solidity      ████████··   8/10             ║
-║  Hardhat       ████████··   8/10             ║
-║  Ethers.js     ████████··   8/10             ║
-║  ERC-721/20    ████████··   8/10             ║
+║  WEB3 & DECENTRALIZED                         ║
+║  Solidity      ████████··   8/10              ║
+║  Hardhat       ████████··   8/10              ║
+║  Ethers.js     ████████··   8/10              ║
+║  ERC-721/20    ████████··   8/10              ║
 ╠═══════════════════════════════════════════════╣
-║  CORE & BACKEND                              ║
-║  Python        ████████··   8/10             ║
-║  Node.js       ███████···   7/10             ║
-║  Gemini AI     ███████···   7/10             ║
-║  REST APIs     ████████··   8/10             ║
+║  CORE & BACKEND                               ║
+║  Python        ████████··   8/10              ║
+║  Node.js       ███████···   7/10              ║
+║  Gemini AI     ███████···   7/10              ║
+║  REST APIs     ████████··   8/10              ║
 ╠═══════════════════════════════════════════════╣
-║  TOOLS & DEVOPS                              ║
-║  Git / GitHub  █████████·   9/10             ║
-║  Vercel        █████████·   9/10             ║
-║  Vite          ████████··   8/10             ║
-║  Linux         ███████···   7/10             ║
+║  TOOLS & DEVOPS                               ║
+║  Git / GitHub  █████████·   9/10              ║
+║  Vercel        █████████·   9/10              ║
+║  Vite          ████████··   8/10              ║
+║  Linux         ███████···   7/10              ║
 ╚═══════════════════════════════════════════════╝
-║  GITHUB STATS  → 54 repos · 9 live deploys   ║
-║  LANGUAGES     → JS, TS, Python, HTML, CSS   ║
+║  GITHUB STATS  → 54 repos · 9 live deploys    ║
+║  LANGUAGES     → JS, TS, Python, HTML, CSS    ║
 ║                  Solidity, Java, C#           ║
 ╚═══════════════════════════════════════════════╝`;
 
 const CONTACT_TEXT = `
 ╔═══════════════════════════════════════════════╗
-║       CONTACT // SECURE CHANNEL OPEN         ║
+║       CONTACT // SECURE CHANNEL OPEN          ║
 ╠═══════════════════════════════════════════════╣
-║  EMAIL    → thutoratlhahane@gmail.com        ║
-║  GITHUB   → github.com/Thuto42096            ║
-║  PORTFOLIO→ thuto-r.vercel.app               ║
-║  SYSTEM21 → system21.vercel.app              ║
+║  EMAIL    → thuto42096@gmail.com              ║
+║  GITHUB   → github.com/Thuto42096             ║
+║  PORTFOLIO→ thutopro.vercel.app               ║
+║                                               ║
 ╠═══════════════════════════════════════════════╣
-║  STATUS   → [OPEN TO OPPORTUNITIES]          ║
+║  STATUS   → [OPEN TO OPPORTUNITIES]           ║
 ║  TIMEZONE → Africa/Johannesburg (UTC+2)       ║
 ╚═══════════════════════════════════════════════╝`;
 
 const WHOAMI_TEXT = `
 ╔═══════════════════════════════════════════════╗
-║          SYSTEM IDENTITY REPORT              ║
+║          SYSTEM IDENTITY REPORT               ║
 ╠═══════════════════════════════════════════════╣
-║  USER     → Thuto Ratlhahane (Thuto_R)       ║
-║  GITHUB   → github.com/Thuto42096            ║
-║  BIO      → Junior dev. Problem solver.      ║
-║             LifeLong Learner.                ║
-║  REPOS    → 54 public (47 original)          ║
-║  DEPLOYS  → 9 live on Vercel                 ║
-║  STACK    → JS/TS · Python · Solidity        ║
-║  LOCATION → South Africa 🇿🇦                 ║
-║  ON CHAIN → Since April 2024                ║
+║  USER     → Thuto Ratlhahane (Thuto_R)        ║
+║  GITHUB   → github.com/Thuto42096             ║
+║  BIO      → Junior dev. Problem solver.       ║
+║             LifeLong Learner.                 ║
+║  REPOS    → 54 public (47 original)           ║
+║  DEPLOYS  → 9 live on Vercel                  ║
+║  STACK    → JS/TS · Python · Solidity         ║
+║  LOCATION → South Africa 🇿🇦                   ║
+║  ON CHAIN → Since April 2024                  ║
 ║  UPTIME   → ${new Date().getFullYear() - 2024}+ years of building              ║
 ╚═══════════════════════════════════════════════╝`;
 
@@ -205,8 +205,8 @@ function processCommand(cmd: string): { lines: TerminalLine[]; shouldClear?: boo
 
 const BOOT_LINES: TerminalLine[] = [
   { id: 1, type: 'system', content: '╔══════════════════════════════════════════════════╗' },
-  { id: 2, type: 'system', content: '║    THUTO.ETH COMMAND TERMINAL v2.6.0            ║' },
-  { id: 3, type: 'system', content: '║    8-BIT CYBERPUNK WEB3 COMMAND CENTER          ║' },
+  { id: 2, type: 'system', content: '║    THUTO.ETH COMMAND TERMINAL v2.6.0             ║' },
+  { id: 3, type: 'system', content: '║                    WEB3 COMMAND CENTER           ║' },
   { id: 4, type: 'system', content: '╚══════════════════════════════════════════════════╝' },
   { id: 5, type: 'system', content: '' },
   { id: 6, type: 'success', content: '  [OK] Chain connection: ESTABLISHED' },

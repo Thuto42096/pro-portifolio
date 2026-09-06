@@ -36,26 +36,26 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │          FATB — HERMES AGENT SYSTEM             │
 ├─────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐            │
-│  │ Binance/CCXT │  │  yfinance    │            │
-│  │ (crypto OHLCV│  │ (forex OHLCV)│            │
-│  └──────┬───────┘  └──────┬───────┘            │
-│         └────────┬─────────┘                   │
+│  ┌──────────────┐  ┌──────────────┐             │
+│  │ Binance/CCXT │  │  yfinance    │             │
+│  │ (crypto OHLCV│  │ (forex OHLCV)│             │
+│  └──────┬───────┘  └──────┬───────┘             │
+│         └────────┬─────────┘                    │
 │                  ▼                              │
-│         Hermes Data Layer                      │
-│         crypto_data.py / forex_data.py         │
+│         Hermes Data Layer                       │
+│         crypto_data.py / forex_data.py          │
 │                  │                              │
 │                  ▼                              │
-│         Technical Indicators                   │
-│         (RSI, MACD, Bollinger, EMA)            │
+│         Technical Indicators                    │
+│         (RSI, MACD, Bollinger, EMA)             │
 │                  │                              │
 │                  ▼                              │
-│         Gemini AI Signal Engine                │
-│         → Structured JSON Output               │
+│         Gemini AI Signal Engine                 │
+│         → Structured JSON Output                │
 │                  │                              │
-│         ┌────────┴────────┐                   │
-│         ▼                 ▼                   │
-│    Execution Agent    Dashboard API           │
+│         ┌────────┴────────┐                     │
+│         ▼                 ▼                     │
+│    Execution Agent    Dashboard API             │
 └─────────────────────────────────────────────────┘`,
     status: 'WIP',
     networkColor: '#ffe600',
@@ -81,22 +81,22 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │          WTC NFT MINTER ECOSYSTEM               │
 ├─────────────────────────────────────────────────┤
-│  Next.js Frontend dApp                         │
-│  (wtc-nft-minter.vercel.app)                   │
+│  Next.js Frontend dApp                          │
+│  (wtc-nft-minter.vercel.app)                    │
 │         │                                       │
 │         ▼                                       │
 │  Ethereum Sepolia Testnet                       │
-│  ┌──────────────────────────────────────┐      │
-│  │  WTC_NFT (ERC-721)                   │      │
-│  │  0xE73A...b12D ✓ Verified            │      │
-│  └──────────────┬─────────────────────┘       │
+│  ┌──────────────────────────────────────┐       │
+│  │  WTC_NFT (ERC-721)                   │       │
+│  │  0xE73A...b12D ✓ Verified            │       │
+│  └──────────────┬─────────────────────┘         │
 │                 │ mint / stake                  │
-│  ┌──────────────▼──────────────────────┐       │
+│  ┌──────────────▼──────────────────────┐        │
 │  │  StakingVault                        │       │
 │  │  0x5a74...5bB5 ✓ Verified            │       │
-│  └──────────────┬──────────────────────┘       │
+│  └──────────────┬──────────────────────┘        │
 │                 │ reward                        │
-│  ┌──────────────▼──────────────────────┐       │
+│  ┌──────────────▼──────────────────────┐        │
 │  │  WTC_Coin (ERC-20 reward token)      │       │
 │  │  0xfd3e...24cA ✓ Verified            │       │
 │  └──────────────────────────────────────┘       │
@@ -122,23 +122,23 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Thuto42096/crypto-raffle-dApp',
     architectureDiagram: `
 ┌─────────────────────────────────────────────────┐
-│         CRYPTO RAFFLE dAPP SYSTEM              │
+│         CRYPTO RAFFLE dAPP SYSTEM               │
 ├─────────────────────────────────────────────────┤
-│  Frontend (JavaScript / Ethers.js)             │
-│  cryptorewardpool.vercel.app                   │
+│  Frontend (JavaScript / Ethers.js)              │
+│  cryptorewardpool.vercel.app                    │
 │         │                                       │
 │         ▼                                       │
-│  Raffle.sol Smart Contract                     │
-│  ┌───────────────────────────────────┐         │
-│  │  enter()   → player pays ETH in  │         │
-│  │  pickWinner() → random selection  │         │
-│  │  withdraw()  → winner gets pool   │         │
-│  └─────────────────┬─────────────────┘         │
+│  Raffle.sol Smart Contract                      │
+│  ┌───────────────────────────────────┐          │
+│  │  enter()   → player pays ETH in   │          │
+│  │  pickWinner() → random selection  │          │
+│  │  withdraw()  → winner gets pool   │          │
+│  └─────────────────┬─────────────────┘          │
 │                    │                            │
-│         ┌──────────┴───────────┐               │
-│         ▼                      ▼               │
-│    Players Array         Prize Pool            │
-│    (all entrants)        (ETH balance)         │
+│         ┌──────────┴───────────┐                │
+│         ▼                      ▼                │
+│    Players Array         Prize Pool             │
+│    (all entrants)        (ETH balance)          │
 └─────────────────────────────────────────────────┘`,
     status: 'LIVE',
     networkColor: '#00f3ff',
@@ -169,13 +169,13 @@ export const PROJECTS: Project[] = [
 │         │                       │               │
 │         └──────────┬────────────┘               │
 │                    ▼                            │
-│         Marketplace.sol                        │
-│  ┌───────────────────────────────────┐         │
-│  │  Listings mapping                │         │
-│  │  Escrow logic                    │         │
-│  │  confirmDelivery() → release ETH │         │
-│  │  dispute() → mediation state     │         │
-│  └───────────────────────────────────┘         │
+│         Marketplace.sol                         │
+│  ┌───────────────────────────────────┐          │
+│  │  Listings mapping                 │          │
+│  │  Escrow logic                     │          │
+│  │  confirmDelivery() → release ETH  │          │
+│  │  dispute() → mediation state      │          │
+│  └───────────────────────────────────┘          │
 └─────────────────────────────────────────────────┘`,
     status: 'BETA',
     networkColor: '#00ff66',
@@ -199,20 +199,20 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │            ABC ERC-721 ARCHITECTURE             │
 ├─────────────────────────────────────────────────┤
-│  index.html (Minting UI)                       │
-│  Ethers.js ←→ MetaMask wallet                  │
+│  index.html (Minting UI)                        │
+│  Ethers.js ←→ MetaMask wallet                   │
 │         │                                       │
 │         ▼                                       │
-│  ABC_NFT.sol (ERC-721)                         │
-│  ┌───────────────────────────────────┐         │
-│  │  mint(to, tokenId)               │         │
-│  │  tokenURI(tokenId) → metadata    │         │
-│  │  ownerOf(tokenId)                │         │
-│  │  transferFrom(from, to, id)      │         │
-│  │  OpenZeppelin ERC721 base        │         │
-│  └───────────────────────────────────┘         │
+│  ABC_NFT.sol (ERC-721)                          │
+│  ┌───────────────────────────────────┐          │
+│  │  mint(to, tokenId)                │          │
+│  │  tokenURI(tokenId) → metadata     │          │
+│  │  ownerOf(tokenId)                 │          │
+│  │  transferFrom(from, to, id)       │          │
+│  │  OpenZeppelin ERC721 base         │          │
+│  └───────────────────────────────────┘          │
 │                                                 │
-│  Hardhat: compile → test → deploy → verify     │
+│  Hardhat: compile → test → deploy → verify      │
 └─────────────────────────────────────────────────┘`,
     status: 'LIVE',
     networkColor: '#ff0055',
@@ -239,20 +239,20 @@ export const PROJECTS: Project[] = [
 │  User calls: factory.createWallet(owner)        │
 │         │                                       │
 │         ▼                                       │
-│  WalletFactory.sol                             │
-│  ┌───────────────────────────────────┐         │
-│  │  implementation (logic contract)  │         │
-│  │  createWallet() →                │         │
-│  │    EIP-1167 Clone Deploy          │         │
-│  │    init(owner) on clone           │         │
-│  │  wallets[user] → address          │         │
-│  └──────────────────┬────────────────┘         │
+│  WalletFactory.sol                              │
+│  ┌───────────────────────────────────┐          │
+│  │  implementation (logic contract)  │          │
+│  │  createWallet() →                 │          │
+│  │    EIP-1167 Clone Deploy          │          │
+│  │    init(owner) on clone           │          │
+│  │  wallets[user] → address          │          │
+│  └──────────────────┬────────────────┘          │
 │                     │                           │
 │                     ▼                           │
-│  SmartWallet.sol (cloned per user)             │
-│  ├── execute(to, value, data)                  │
-│  ├── executeMulti([calls])                     │
-│  └── isOwner(addr) → bool                     │
+│  SmartWallet.sol (cloned per user)              │
+│  ├── execute(to, value, data)                   │
+│  ├── executeMulti([calls])                      │
+│  └── isOwner(addr) → bool                       │
 └─────────────────────────────────────────────────┘`,
     status: 'BETA',
     networkColor: '#ffe600',
@@ -276,18 +276,18 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │             LNFT ARCHITECTURE                   │
 ├─────────────────────────────────────────────────┤
-│  Minting Frontend (JS + Ethers.js)             │
+│  Minting Frontend (JS + Ethers.js)              │
 │         │                                       │
 │         ▼                                       │
-│  LNFT.sol (ERC-721)                            │
-│  ├── mint(to) → increments tokenId             │
-│  ├── tokenURI → IPFS CID                      │
-│  └── maxSupply cap enforced                   │
+│  LNFT.sol (ERC-721)                             │
+│  ├── mint(to) → increments tokenId              │
+│  ├── tokenURI → IPFS CID                        │
+│  └── maxSupply cap enforced                     │
 │                                                 │
-│  IPFS Storage                                  │
-│  ├── metadata JSON per token                  │
-│  │   { name, description, image }             │
-│  └── image assets → IPFS CID                 │
+│  IPFS Storage                                   │
+│  ├── metadata JSON per token                    │
+│  │   { name, description, image }               │
+│  └── image assets → IPFS CID                    │
 └─────────────────────────────────────────────────┘`,
     status: 'BETA',
     networkColor: '#00f3ff',
@@ -311,17 +311,17 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │         VENDING MACHINE dAPP                    │
 ├─────────────────────────────────────────────────┤
-│  Frontend (JavaScript + Ethers.js)             │
-│  ├── Show inventory                            │
-│  ├── Purchase button → sends ETH              │
-│  └── Owner panel → restock                    │
+│  Frontend (JavaScript + Ethers.js)              │
+│  ├── Show inventory                             │
+│  ├── Purchase button → sends ETH                │
+│  └── Owner panel → restock                      │
 │         │                                       │
 │         ▼                                       │
-│  VendingMachine.sol                            │
-│  ├── inventory: mapping(string → uint)        │
-│  ├── purchase(item) payable                   │
-│  ├── restock(item, qty) onlyOwner             │
-│  └── withdraw() onlyOwner                    │
+│  VendingMachine.sol                             │
+│  ├── inventory: mapping(string → uint)          │
+│  ├── purchase(item) payable                     │
+│  ├── restock(item, qty) onlyOwner               │
+│  └── withdraw() onlyOwner                       │
 └─────────────────────────────────────────────────┘`,
     status: 'LIVE',
     networkColor: '#00ff66',
@@ -345,18 +345,18 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │          CRYPTO LOTTERY SYSTEM                  │
 ├─────────────────────────────────────────────────┤
-│  Frontend (JS + Ethers.js)                     │
-│  ├── Buy ticket → sends ETH                   │
-│  ├── View players list                        │
-│  └── Pick winner (owner only)                 │
+│  Frontend (JS + Ethers.js)                      │
+│  ├── Buy ticket → sends ETH                     │
+│  ├── View players list                          │
+│  └── Pick winner (owner only)                   │
 │         │                                       │
 │         ▼                                       │
-│  Lottery.sol                                   │
-│  ├── enter() payable → adds msg.sender        │
-│  ├── players[]  → entrant addresses            │
-│  ├── pickWinner() → pseudo-random select      │
-│  │    keccak256(block data + players)          │
-│  └── winner receives full balance             │
+│  Lottery.sol                                    │
+│  ├── enter() payable → adds msg.sender          │
+│  ├── players[]  → entrant addresses             │
+│  ├── pickWinner() → pseudo-random select        │
+│  │    keccak256(block data + players)           │
+│  └── winner receives full balance               │
 └─────────────────────────────────────────────────┘`,
     status: 'BETA',
     networkColor: '#ffe600',
@@ -380,20 +380,20 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │          AGENT JORVIS ARCHITECTURE              │
 ├─────────────────────────────────────────────────┤
-│  User (CLI / API)                              │
+│  User (CLI / API)                               │
 │         │                                       │
 │         ▼                                       │
-│  Jorvis Agent Core (Antigravity SDK)           │
+│  Jorvis Agent Core (Antigravity SDK)            │
 │         │                                       │
-│  ┌──────┴──────┐                               │
-│  ▼             ▼                               │
-│ Gemini LLM   Memory Store                     │
-│ (reasoning)  (conversation history)           │
+│  ┌──────┴──────┐                                │
+│  ▼             ▼                                │
+│ Gemini LLM   Memory Store                       │
+│ (reasoning)  (conversation history)             │
 │         │                                       │
-│  ┌──────┴───────────────┐                      │
-│  ▼         ▼            ▼                      │
-│ Goals   Coaching     Productivity              │
-│ Module  Sessions     Tracking                  │
+│  ┌──────┴───────────────┐                       │
+│  ▼         ▼            ▼                       │
+│ Goals   Coaching     Productivity               │
+│ Module  Sessions     Tracking                   │
 └─────────────────────────────────────────────────┘`,
     status: 'WIP',
     networkColor: '#00ff66',
@@ -418,17 +418,17 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │              SYSTEM21 ARCHITECTURE              │
 ├─────────────────────────────────────────────────┤
-│  GitHub → Vercel CI/CD pipeline                │
-│  Auto-deploy on push to main branch            │
+│  GitHub → Vercel CI/CD pipeline                 │
+│  Auto-deploy on push to main branch             │
 │         │                                       │
 │         ▼                                       │
-│  Vercel Edge Network (CDN)                     │
-│  system21.vercel.app                           │
+│  Vercel Edge Network (CDN)                      │
+│  system21.vercel.app                            │
 │         │                                       │
-│  ┌──────┴──────┐                               │
-│  ▼             ▼                               │
-│  HTML/CSS     JavaScript                       │
-│  Structure    Interactivity                    │
+│  ┌──────┴──────┐                                │
+│  ▼             ▼                                │
+│  HTML/CSS     JavaScript                        │
+│  Structure    Interactivity                     │
 └─────────────────────────────────────────────────┘`,
     status: 'LIVE',
     networkColor: '#00f3ff',
@@ -452,17 +452,17 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │         MECHANIC WEBSITE ARCHITECTURE           │
 ├─────────────────────────────────────────────────┤
-│  index.html                                    │
-│  ├── Hero / Header                             │
-│  ├── Services Grid                             │
-│  ├── About Section                             │
-│  ├── Contact Form                             │
-│  └── Footer                                   │
+│  index.html                                     │
+│  ├── Hero / Header                              │
+│  ├── Services Grid                              │
+│  ├── About Section                              │
+│  ├── Contact Form                               │
+│  └── Footer                                     │
 │                                                 │
-│  styles/ → layout, animations, responsive      │
-│  scripts/ → mobile nav, form validation        │
+│  styles/ → layout, animations, responsive       │
+│  scripts/ → mobile nav, form validation         │
 │                                                 │
-│  Static hosting (Vercel ready)                 │
+│  Static hosting (Vercel ready)                  │
 └─────────────────────────────────────────────────┘`,
     status: 'LIVE',
     networkColor: '#ffe600',
@@ -487,20 +487,20 @@ export const PROJECTS: Project[] = [
 ┌─────────────────────────────────────────────────┐
 │          PORTFOLIO V1 ARCHITECTURE              │
 ├─────────────────────────────────────────────────┤
-│  Vanilla Stack (zero frameworks)               │
+│  Vanilla Stack (zero frameworks)                │
 │                                                 │
-│  index.html                                    │
-│  ├── Hero section                              │
-│  ├── Projects showcase                         │
-│  ├── Skills section                            │
-│  └── Contact section                          │
+│  index.html                                     │
+│  ├── Hero section                               │
+│  ├── Projects showcase                          │
+│  ├── Skills section                             │
+│  └── Contact section                            │
 │                                                 │
-│  style.css                                     │
-│  ├── CSS custom properties                     │
-│  ├── Flexbox / Grid layouts                   │
-│  └── CSS scroll animations                   │
+│  style.css                                      │
+│  ├── CSS custom properties                      │
+│  ├── Flexbox / Grid layouts                     │
+│  └── CSS scroll animations                      │
 │                                                 │
-│  Deployed: Vercel (thuto-r.vercel.app)         │
+│  Deployed: Vercel (thuto-r.vercel.app)          │
 └─────────────────────────────────────────────────┘`,
     status: 'LIVE',
     networkColor: '#ff0055',
