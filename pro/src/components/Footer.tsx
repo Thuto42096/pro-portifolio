@@ -27,7 +27,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="font-pixel text-sm text-neon-cyan glow-cyan">[THUTO.ETH]</div>
             <p className="font-mono text-xs text-gray-400 leading-relaxed max-w-xs">
-              Full-Stack Engineer & Smart Contract Developer. Building Web3 systems, DeFi protocols, and high-performance applications from South Africa.
+              Junior Developer at ABC — Africa's Blockchain Club. Building Web3 systems, dApps, and AI agents from South Africa.
             </p>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-cyber-green hud-pulse" />

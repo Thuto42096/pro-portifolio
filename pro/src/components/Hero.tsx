@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Download, Send, Zap, Activity } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 
-const ROLES = ['Full-Stack Developer', 'Smart Contract Dev', 'AI Agent Builder', 'LifeLong Learner'];
+const ROLES = ['Junior Dev @ ABC', 'Full-Stack Developer', 'Smart Contract Dev', 'AI Agent Builder'];
 
 const GAS_BARS = [
   { label: 'BASE', value: 72, color: '#00f3ff' },
@@ -48,7 +48,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 border border-neon-cyan/40 bg-surface px-3 py-2 w-fit">
             <Zap size={10} className="text-acid-yellow fill-acid-yellow" />
             <span className="font-pixel text-[8px] text-acid-yellow tracking-widest">
-              AVAILABLE FOR HIRE
+              JUNIOR DEV @ AFRICA'S BLOCKCHAIN CLUB
             </span>
           </div>
 

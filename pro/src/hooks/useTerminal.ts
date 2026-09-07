@@ -73,8 +73,9 @@ const WHOAMI_TEXT = `
 ╠═══════════════════════════════════════════════╣
 ║  USER     → Thuto Ratlhahane (Thuto_R)        ║
 ║  GITHUB   → github.com/Thuto42096             ║
-║  BIO      → Junior dev. Problem solver.       ║
-║             LifeLong Learner.                 ║
+║  ROLE     → Junior Dev @ ABC                  ║
+║             Africa's Blockchain Club          ║
+║  BIO      → Problem solver. LifeLong Learner. ║
 ║  REPOS    → 54 public (47 original)           ║
 ║  DEPLOYS  → 9 live on Vercel                  ║
 ║  STACK    → JS/TS · Python · Solidity         ║
