@@ -238,7 +238,7 @@ export function Hero() {
                   <div className="font-pixel text-[7px] text-gray-500 mt-0.5">LVL 99 // BUILDER</div>
                 </div>
                 <div className="flex gap-1">
-                  {['⚛', '◆', '🌿'].map((icon, i) => (
+                  {['⚛', '◆', '⎇'].map((icon, i) => (
                     <div
                       key={i}
                       className="w-6 h-6 border border-neon-cyan/30 flex items-center justify-center text-xs bg-surface-light"

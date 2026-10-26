@@ -79,7 +79,7 @@ const WHOAMI_TEXT = `
 ║  REPOS    → 54 public (47 original)           ║
 ║  DEPLOYS  → 9 live on Vercel                  ║
 ║  STACK    → JS/TS · Python · Solidity         ║
-║  LOCATION → South Africa 🇿🇦                   ║
+║  LOCATION → South Africa [ZA]                   ║
 ║  ON CHAIN → Since April 2024                  ║
 ║  UPTIME   → ${new Date().getFullYear() - 2024}+ years of building              ║
 ╚═══════════════════════════════════════════════╝`;
@@ -178,7 +178,7 @@ function processCommand(cmd: string): { lines: TerminalLine[]; shouldClear?: boo
           {
             id: nextId(),
             type: 'success',
-            content: '\n  [SUDO ACCESS GRANTED]\n  ⚡ INITIATING PIXEL REWARD PROTOCOL...\n  🎉 ACHIEVEMENT UNLOCKED: "Easter Egg Hunter"\n',
+            content: '\n  [SUDO ACCESS GRANTED]\n  >> INITIATING PIXEL REWARD PROTOCOL...\n  >> ACHIEVEMENT UNLOCKED: "Easter Egg Hunter"\n',
           },
         ],
       };

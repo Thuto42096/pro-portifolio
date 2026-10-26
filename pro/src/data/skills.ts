@@ -28,12 +28,12 @@ export const SKILL_MODULES: SkillModule[] = [
     glowClass: 'glow-cyan',
     skills: [
       // TypeScript (11 repos) and JavaScript (12 repos) are top languages
-      { name: 'JavaScript', level: 9, icon: '⚡' },
-      { name: 'TypeScript', level: 8, icon: '𝓣' },
+      { name: 'JavaScript', level: 9, icon: 'JS' },
+      { name: 'TypeScript', level: 8, icon: 'TS' },
       { name: 'React', level: 8, icon: '⚛' },
       { name: 'Next.js', level: 7, icon: '▲' },
-      { name: 'HTML / CSS', level: 9, icon: '🌐' },
-      { name: 'Tailwind CSS', level: 7, icon: '🌊' },
+      { name: 'HTML / CSS', level: 9, icon: '</>' },
+      { name: 'Tailwind CSS', level: 7, icon: '~' },
     ],
   },
   {
@@ -46,12 +46,12 @@ export const SKILL_MODULES: SkillModule[] = [
     glowClass: 'glow-green',
     skills: [
       // Python (9 repos) — FATB, agent-jorvis, my-first-agent etc.
-      { name: 'Python', level: 8, icon: '🐍' },
-      { name: 'Node.js', level: 7, icon: '🟢' },
+      { name: 'Python', level: 8, icon: 'Py' },
+      { name: 'Node.js', level: 7, icon: '▶' },
       { name: 'REST APIs', level: 8, icon: '⇄' },
       { name: 'Google Gemini AI', level: 7, icon: '✦' },
-      { name: 'Antigravity SDK', level: 7, icon: '🚀' },
-      { name: 'Java', level: 5, icon: '☕' },
+      { name: 'Antigravity SDK', level: 7, icon: '◈' },
+      { name: 'Java', level: 5, icon: '◇' },
     ],
   },
   {
@@ -67,9 +67,9 @@ export const SKILL_MODULES: SkillModule[] = [
       { name: 'Solidity', level: 8, icon: '◆' },
       { name: 'Hardhat', level: 8, icon: '⛑' },
       { name: 'Ethers.js', level: 8, icon: '⟠' },
-      { name: 'ERC-721 / ERC-20', level: 8, icon: '📜' },
-      { name: 'Smart Contracts', level: 8, icon: '🔗' },
-      { name: 'dApp Development', level: 7, icon: '🌐' },
+      { name: 'ERC-721 / ERC-20', level: 8, icon: '◎' },
+      { name: 'Smart Contracts', level: 8, icon: '◆' },
+      { name: 'dApp Development', level: 7, icon: '▣' },
     ],
   },
   {
@@ -82,11 +82,11 @@ export const SKILL_MODULES: SkillModule[] = [
     glowClass: 'glow-yellow',
     skills: [
       // 9 Vercel deployments, GitHub (54 repos), Git heavy usage
-      { name: 'Git / GitHub', level: 9, icon: '🌿' },
+      { name: 'Git / GitHub', level: 9, icon: '⎇' },
       { name: 'Vercel', level: 9, icon: '▲' },
-      { name: 'Vite', level: 8, icon: '⚡' },
-      { name: 'npm / pip', level: 8, icon: '📦' },
-      { name: 'Linux', level: 7, icon: '🐧' },
+      { name: 'Vite', level: 8, icon: '◉' },
+      { name: 'npm / pip', level: 8, icon: '■' },
+      { name: 'Linux', level: 7, icon: '$_' },
       { name: 'C#', level: 4, icon: '◈' },
     ],
   },
